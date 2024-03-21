@@ -1,0 +1,83 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: AWS CloudFormation which creates resources for Apache Spark Athena
+### 
+# Parameters for cloudformation template.
+Parameters:
+  S3PySparkBucketName:
+    Type: String
+    Description: Bucket name for aws demo
+Resources:
+  S3BucketForData:
+    Type: AWS::S3::Bucket
+    Properties: 
+      BucketName: !Ref S3PySparkBucketName
+      Tags:
+      - Key: identifier
+        Value: pySparktutorial
+  ###
+  # Database created for tables to reside in.
+  GlueDatabase:
+    Type: AWS::Glue::Database
+    Properties: 
+      CatalogId: !Ref AWS::AccountId
+      DatabaseInput: 
+        Name: term_paper_demo_db
+        Description: "This database contains tables for PySpark demo"
+  ###
+  # Create nyc taxi data table which depends on GlueDatabase and S3 bucket.
+  GlueCustomerTable:
+    DependsOn: 
+    - GlueDatabase
+    - S3BucketForData
+    Type: AWS::Glue::Table
+    Properties: 
+      CatalogId: !Ref AWS::AccountId
+      DatabaseName: term_paper_demo_db
+      TableInput: 
+        Name: nyc_taxi
+        Description: Table for nyc taxi data
+        TableType: EXTERNAL_TABLE
+        StorageDescriptor:
+          Columns:
+          - Name: medallion
+            Type: string
+          - Name: hack_license
+            Type: string
+          - Name: pickup_datetime
+            Type: string
+          - Name: dropoff_datetime
+            Type: string
+          - Name: trip_time_in_secs
+            Type: int
+          - Name: trip_distance
+            Type: float
+          - Name: pickup_longitude
+            Type: float
+          - Name: pickup_latitude
+            Type: float
+          - Name: dropoff_longitude
+            Type: float
+          - Name: dropoff_latitude
+            Type: float
+          - Name: payment_type
+            Type: string
+          - Name: fare_amount
+            Type: float
+          - Name: surcharge
+            Type: float
+          - Name: mta_tax
+            Type: float
+          - Name: tip_amount
+            Type: float
+          - Name: tolls_amount
+            Type: float
+          - Name: total_amount
+            Type: float
+          Location: !Sub s3://${S3PySparkBucketName}/taxi
+          InputFormat: org.apache.hadoop.mapred.TextInputFormat
+          OutputFormat: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
+          SerdeInfo:
+            Parameters: 
+              field.delim: ","  
+            SerializationLibrary: org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe
+  
