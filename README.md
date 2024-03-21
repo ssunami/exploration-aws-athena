@@ -109,6 +109,33 @@ As both of our codes are ran using AWS, create the AWS account
    Step 2. Choose or define schema
    - Schema - Define or upload schema: Add
 
+## Running Code
+
+### For code sample 1:
+- Upload the code sample to the S3 bucket created.
+- Upload the taxi dataset to S3 bucket
+- Small dataset: in cloud shell,  “aws s3 cp s3://metcs777-sp24/data/taxi-data-sorted-small.csv.bz2 s3://<your bucket name>”
+- Large dataset: in cloud shell,  “aws s3 cp s3://metcs777-sp24/data/taxi-data-sorted-large.csv.bz2 s3://<your bucket name>”
+- Within the EMR cluster, create a step.
+   - Type: Spark Application
+   - Deploy mode: Cluster mode
+   - Application: Browse sample code from S3
+   - Arguments: s3://<location of dataset> s3://<location of result of task1> s3://<location of result of task2>
+
+### For code sample 2:
+
+1. Start notebook session on AWS Athena (Athena > Notebook editor)
+
+2. Upload the taxi dataset to S3 bucket
+   - Small dataset: in cloud shell,“aws s3 cp s3://metcs777-sp24/data/taxi-data-sorted-small.csv.bz2 s3://<your bucket name>”
+   - Large dataset: in cloud shell,“aws s3 cp s3://metcs777-sp24/data/taxi-data-sorted-large.csv.bz2 s3://<your bucket name>”
+
+3. Fetch Glue database and assess datasets stored on S3 bucket
+   - Check databases on Athena notebook
+   - “spark.sql(‘show databases’).show()”
+
+4. Export notebook (Athena > Notebook explorer)
+   - Go to “Action” tab and then “Export file”
 
 
 
