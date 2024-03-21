@@ -7,7 +7,7 @@ We use the data set consisting of New York City Taxi trip reports in the Year 20
 
 
 | |Attribute|Description|
--------------------------
+|-|---------|-----------|
 |0|medallion|Taxi ID|
 |1|hack_license|Driver ID|
 |2|pickup_datetime|Time when passengers were picked up|
