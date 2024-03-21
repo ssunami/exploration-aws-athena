@@ -1,6 +1,9 @@
 # term-paper-metcs777
 Athena is one of the data analytics services offered that can directly analyze the data stored in S3. This service uses SQL as a coding language, in which data engineers are familiar with, and is compatible with various data formats. Thus, it enables us to efficiently modify and/or analyze the data. In this project, we will be executing a simple task to modify/analyze the data on Athena. In addition, we will write the python code using spark, doing exactly the same task, and compare their performances. This paper aims to explore the usefulness of this technology, as well as pros and cons, through the comparison.
 
+## Data Set
+We use the data set consisting of New York City Taxi trip reports in the Year 2013. The dataset was released under the FOIL (The Freedom of Information Law) and made public by Chris Whong <https://chriswhong.com/open-data/foil_nyc_taxi/>. 
+
 ## Environmental Setup
 As both of our codes are ran using AWS, create the AWS account
 
