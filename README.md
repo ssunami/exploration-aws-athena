@@ -48,24 +48,24 @@ As both of our codes are ran using AWS, create the AWS account
    
    Step 1. Create stack
 
-- Prerequisite: Prepare template
-     - Template is ready
-     - Specify template
-     - Template source: Upload a template file
+   - Prerequisite: Prepare template
+        - Template is ready
+        - Specify template
+        - Template source: Upload a template file
   
    Step 2. Specify template
 
-- Provide a stack name
-- Parameters
+   - Provide a stack name
+   - Parameters
   
    Step 3. Configure stack options
 
-- Tags: default
-- Permissions: default
-- Stack failure options: default
-- Advanced options: default
-- Check stack status: “CREATE_COMPLETE”
-- Go to “Resources” tab and check to fetch the S3 bucket on “Physical ID”
+   - Tags: default
+   - Permissions: default
+   - Stack failure options: default
+   - Advanced options: default
+   - Check stack status: “CREATE_COMPLETE”
+   - Go to “Resources” tab and check to fetch the S3 bucket on “Physical ID”
 
 2. AWS S3 (S3 > Buckets)
 - Already created a bucket previous environmental setup on CloudFormation
