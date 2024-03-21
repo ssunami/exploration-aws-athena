@@ -45,15 +45,21 @@ As both of our codes are ran using AWS, create the AWS account
 ### For code sample 2:
 1. AWS CloudFormation (CloudFormation > Stacks)
    Create a stack with new resources
+   
 Step 1. Create stack
+
 - Prerequisite: Prepare template
      - Template is ready
      - Specify template
      - Template source: Upload a template file
+  
 Step 2. Specify template
+
 - Provide a stack name
 - Parameters
+  
 Step 3. Configure stack options
+
 - Tags: default
 - Permissions: default
 - Stack failure options: default
