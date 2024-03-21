@@ -120,7 +120,7 @@ As both of our codes are ran using AWS, create the AWS account
    - Type: Spark Application
    - Deploy mode: Cluster mode
    - Application: Browse sample code from S3
-   - Arguments: s3://<location of dataset> s3://<location of result of task1> s3://<location of result of task2>
+   - Arguments: "s3://<location of dataset> s3://<location of result of task1> s3://<location of result of task2>"
 
 ### For code sample 2:
 
