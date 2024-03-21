@@ -4,6 +4,30 @@ Athena is one of the data analytics services offered that can directly analyze t
 ## Data Set
 We use the data set consisting of New York City Taxi trip reports in the Year 2013. The dataset was released under the FOIL (The Freedom of Information Law) and made public by Chris Whong <https://chriswhong.com/open-data/foil_nyc_taxi/>. 
 
+
+
+| |Attribute|Description|
+-------------------------
+|0|medallion|Taxi ID|
+|1|hack_license|Driver ID|
+|2|pickup_datetime|Time when passengers were picked up|
+|3|dropoff_datetime|Time when passengers were dropped off|
+|4|trip_time_in_secs|Trip time in seconds|
+|5|trip_distance|Trip distance in miles|
+|6|pickup_longitude|Longitude coordinate of pickup location|
+|7|pickup_latitude|Latitude coordinate of pickup location| 
+|8|dropoff_longitude|Longitude coordinate of dropoff location|
+|9|dropoff_latitude|Latitude coordinate of dropoff location| 
+|10|payment_type|Payment method: credit or cash|
+|11|fare_amount|Fare amount in dollars
+|12|surcharge Surcharge in dollars|
+|13|mta_tax Tax|in dollars|
+|14|tip_amount|Tip amount in dollars|
+|15|tolls_amount|Bridge and tunnel tolls in dollars|
+|16|total_amount|Total payment amount in dollars|
+
+
+
 ## Environmental Setup
 As both of our codes are ran using AWS, create the AWS account
 
