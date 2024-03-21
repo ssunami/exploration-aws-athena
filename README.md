@@ -20,7 +20,7 @@ The attributes and their descriptions are listed as below:
 |9|dropoff_latitude|Latitude coordinate of dropoff location| 
 |10|payment_type|Payment method: credit or cash|
 |11|fare_amount|Fare amount in dollars|
-|12|surcharge Surcharge in dollars|
+|12|surcharge|Surcharge in dollars|
 |13|mta_tax Tax|in dollars|
 |14|tip_amount|Tip amount in dollars|
 |15|tolls_amount|Bridge and tunnel tolls in dollars|
