@@ -46,19 +46,19 @@ As both of our codes are ran using AWS, create the AWS account
 1. AWS CloudFormation (CloudFormation > Stacks)
    Create a stack with new resources
    
-Step 1. Create stack
+   Step 1. Create stack
 
 - Prerequisite: Prepare template
      - Template is ready
      - Specify template
      - Template source: Upload a template file
   
-Step 2. Specify template
+   Step 2. Specify template
 
 - Provide a stack name
 - Parameters
   
-Step 3. Configure stack options
+   Step 3. Configure stack options
 
 - Tags: default
 - Permissions: default
@@ -98,12 +98,15 @@ Step 3. Configure stack options
 6. AWS Glue (Glue > Databases)
 - Check the database and tables to fetch the S3 bucket
 - To add datasets on Glue databases, “Add table”
-Step 1. Set table properties
+  
+   Step 1. Set table properties
+  
    - Table details - Name, Database: Select a database
    - Table format - Standard AWS Glue table (default)
    - Data store - Select the type of source: S3, Select the type of source: my account, Include path: S3 bucket
    - Data format - Classification: CSV, Delimiter: Comma
-Step 2. Choose or define schema
+  
+   Step 2. Choose or define schema
    - Schema - Define or upload schema: Add
 
 
