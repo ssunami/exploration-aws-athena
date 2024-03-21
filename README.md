@@ -28,7 +28,7 @@ The attributes and their descriptions are listed as below:
 The data set is in CSV format, separated by comma.
 
 ## Tasks
-We run simple tasks using the taxi dataset explained above, with both EMR and Athena, and compared the performance. The first task is finding top 10 medallions that have the largest number of taxis. The other task is counting the number of trips for trip time categories, less than 10 mins, between 10 and 20 mins, between 20 and 30 mins, and more than 30 mins.
+We run simple tasks using the taxi dataset explained above, with both EMR and Athena, and compared the performance. The first task is finding top 10 medallions that have the largest number of taxis. The other task is counting the number of trips for the following trip time categories: less than 10 mins, between 10 and 20 mins, between 20 and 30 mins, and more than 30 mins.
 
 ## Environmental Setup
 As both of our codes are ran using AWS, create the AWS account
