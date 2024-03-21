@@ -6,16 +6,16 @@ As both of our codes are ran using AWS, create the AWS account
 
 ### For code sample 1:
 1. Open S3 and create a bucket; the below is the settings for the bucket that we created.
-   General purpose
-   Object ownership: ACL disabled
-   Block Public Access Settings: Block All public access
-   Bucket versioning: Disabled
-   Default encryption
-   Encryption type: SSE-S3
-   Bucket Key: Enable
-   Advanced settings: Disabled
+   - General purpose
+   - Object ownership: ACL disabled
+   - Block Public Access Settings: Block All public access
+   - Bucket versioning: Disabled
+   - Default encryption
+       - Encryption type: SSE-S3
+       - Bucket Key: Enable
+   - Advanced settings: Disabled
  
-2. Open EMR and create a cluster;  below is the settings for the cluster that we created.
+3. Open EMR and create a cluster;  below is the settings for the cluster that we created.
    Name and applications
    Amazon EMR release: emr-7.0.0
    Application bundle: Spark 3.5.0, Hadoop 3.3.6
