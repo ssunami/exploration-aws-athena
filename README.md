@@ -4,7 +4,6 @@ Athena is one of the data analytics services offered that can directly analyze t
 ## Data Set
 We use the data set consisting of New York City Taxi trip reports in the Year 2013. The dataset was released under the FOIL (The Freedom of Information Law) and made public by Chris Whong (<https://chriswhong.com/open-data/foil_nyc_taxi/>). 
 
-
 The attributes and their descriptions are listed as below:
 | |Attribute|Description|
 |-|---------|-----------|
@@ -28,6 +27,8 @@ The attributes and their descriptions are listed as below:
 
 The data set is in CSV format, separated by comma.
 
+## Tasks
+We run simple tasks using the taxi dataset explained above, with both EMR and Athena, and compared the performance. The first task is finding top 10 medallions that have the largest number of taxis. The other task is counting the number of trips for trip time categories, less than 10 mins, between 10 and 20 mins, between 20 and 30 mins, and more than 30 mins.
 
 ## Environmental Setup
 As both of our codes are ran using AWS, create the AWS account
@@ -165,5 +166,6 @@ As both of our codes are ran using AWS, create the AWS account
 4. Export notebook (Athena > Notebook explorer)
    - Go to “Action” tab and then “Export file”
 
-
+## Result
+We have obtained the same output from those two sample codes, though the computation time was different. It took about 10 mins to execute both tasks using EMR, whereas it took less than 5 mins when we used Athena. Therefore, Athena is much more efficient than using EMR for these type of tasks.
 
